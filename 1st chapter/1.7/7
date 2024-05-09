@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+int number1,number2,Result;
+printf("Enter the value of number1 & number2:");
+scanf("%d%d",&number1,&number2);
+Result=number1+number2;
+printf("Summation is=%d",Result);
+return 0;
+}
+
+
+
+Output:
+Enter the value of number1 & number2:10
+15
+Summation is=25
