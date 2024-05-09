@@ -1,0 +1,181 @@
+# include <stdio.h>
+	int main (){
+	int x, y, result;
+	x = 20, y = 6;
+	result = x+y;
+	printf ("%d \n", result);
+	result = x-y;
+	printf ("%d\n", result );
+	result = x*y;
+	printf ("%d\n", result);
+	result = x/y;
+	printf ("%d\n", result);
+	result = x%y;
+	printf ("%d\n", result);
+	return 0;
+	}
+
+Output:
+26 
+14
+120
+3
+2
+
+
+//Relational operator:
+# include <stdio.h>
+	int main ()
+	{
+	int x = 5, y = 3, z;
+	z = x > y;
+	printf ("Result is = %d", z);
+	return 0;
+	}
+
+
+Output:
+Result is = 1
+
+
+//Logical Operator:
+#include <stdio.h>
+	int main() {
+	int a,b,c;
+	a = 4 , b = 3;
+	c = a && b;
+	b = a||b||c;
+	a = a && b||c;
+	printf("%d\n" , a);
+	printf("%d\n" , b);
+	printf("%d" , c);
+	return 0;
+	}
+
+
+Output:
+1
+1
+1
+
+
+//Assignment Operator:
+# include <stdio.h>
+	int main () 
+	{
+	int i, j;
+	 i=j=15;
+	printf ("i=%d, j=%d" , i, j);
+	i+=j;
+	printf ("\ni=%d, j=%d", i, j);
+	return 0;
+	}
+
+Output:
+i=15, j=15
+i=30, j=15
+
+//Increment: Ex-1:
+# include<stdio.h>
+	int main () {
+	int x;
+	x = 7;
+	printf ("Using postfix (x++) x = %d\n", x++);
+	printf ("Value after increment is:%d\n\n",x);
+	x = 7;
+	printf ("Using prefix (++x) x = %d\n", ++x);
+	printf ("Value after increment is: %d\n", x);
+	return 0;
+	} 
+
+Output:
+Using postfix (x++) x = 7
+Value after increment is:8
+
+Using prefix (++x) x = 8
+Value after increment is: 8
+
+//Increment: Ex-2:
+# include<stdio.h>
+	# include<conio.h>
+	int main () {
+	int i = 10, j = 10;
+	++i;
+	j++;
+	printf ("i = %d, j = %d", i, j);
+	printf ("\ni = %d, j = %d", ++i, j++);
+	printf ("\ni = %d, j = %d", i++, ++j);
+	return 0;
+	}
+
+Output:
+i = 11, j = 11
+i = 12, j = 11
+i = 12, j = 13
+
+
+//Decrement: Ex-1:
+# include<stdio.h>
+	int main () 	
+	{ 
+	int x=7;
+	printf ("Using postfix (x--) x = %d\n", x--);
+	printf ("Value after Decrement is:%d\n\n",x);
+	x = 7;
+	printf ("Using prefix (--x) x = %d\n", --x);
+	printf ("Value after Decrement is: %d\n", x);
+	return 0;
+	} 
+
+Output:
+Using postfix (x--) x = 7
+Value after Decrement is:6
+
+Using prefix (--x) x = 6
+Value after Decrement is: 6
+ 
+
+//Decrement: Ex-2:
+# include<stdio.h>
+	int main ()
+	{
+	int i = 10, j = 10;
+	-- i;
+	j -- ;
+	printf ("i = %d, j = %d", i, j);
+	printf ("\ni = %d, j = %d", --i, j-- );
+	printf ("\ni = %d, j = %d", i-- ,--j);
+	return 0;
+	}
+
+
+Output:
+i = 9, j = 9
+i = 8, j = 9
+i = 8, j = 7
+
+
+//Conditional Operator:
+# include <stdio.h>
+int main () 
+{
+int first, second, maximum;
+printf ("Enter First number :");
+scanf ("%d", &first);
+printf ("\n Enter second number :");
+scanf ("%d", &second);
+maximum = (first > second)? first : second;
+printf ("\n Maximum Number is: %d", maximum);
+return 0;
+}
+
+
+Output:
+Enter First number :10
+
+ Enter second number :15
+
+ Maximum Number is: 15
+
+
+ //
