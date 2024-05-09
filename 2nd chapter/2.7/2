@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+void main() {
+int Base, Power, Result;
+printf("enter the value of Base & Power:");
+scanf("%d %d", &Base, &Power);
+Result=pow(Base,Power);
+printf("Power value is=%d",Result);
+}
+
+Output:
+enter the value of Base & Power:2
+3
+Power value is=8
