@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+int number1,number2,Subtraction,Multiplication,Division,Remainder;
+printf("Enter the value of number1 & number2:");
+scanf("%d%d",&number1,&number2);
+Subtraction=number1-number2;
+Multiplication=number1*number2;
+Division=number1/number2;
+Remainder=number1%number2;
+printf("Subtraction is=%d",Subtraction);
+printf("\nMultiplication is=%d",Multiplication);
+printf("\nDivision is=%d",Division);
+printf("\nRemainder is=%d",Remainder);
+return 0;
+}
+
+
+
+Output:
+Enter the value of number1 & number2:30
+20
+Subtraction is=10
+Multiplication is=600
+Division is=1
+Remainder is=10
