@@ -1,0 +1,27 @@
+// Local variable:
+# include <stdio.h>
+int main () { 
+int x, y, z; //local variable//
+x = 10, y = 20;
+z = x + y;
+printf ("%d ", z);
+return 0;
+}
+
+
+Output:
+30
+
+// Global Variable:
+# include <stdio.h>
+int x = 50; //Global variable//
+int main () { 
+printf ("Value of Global variable x = %d  ", x);
+x = 10; //Local variable//
+printf ("Value of local variable x = %d", x);
+return 0;
+}
+
+
+output:
+Value of Global variable x = 50  Value of local variable x = 10
