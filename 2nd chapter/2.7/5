@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+	int s1, s2, s3, s4, s5, sum, total = 500;
+	float Percentage;
+	printf("\nEnter marks of 5 subjects : ");
+	scanf("%d %d %d %d %d", &s1, &s2, &s3, &s4, &s5);
+	sum = s1 + s2 + s3 + s4 + s5;
+	printf("\nSum : %d", sum);
+	Percentage = (sum * 100) / total;
+	printf("\nPercentage : %f", Percentage);
+return 0;
+}
+
+
+Output:
+Enter marks of 5 subjects : 62
+73
+83
+93
+53
+
+Sum : 364
+Percentage : 72.000000
