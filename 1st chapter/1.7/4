@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+int number1,number2,number3;
+printf("Enter the value of three numbers:");
+scanf("%d%d%d",&number1,&number2,&number3);
+if(number1<number2)
+{
+if(number1<number3)
+printf("The smallest number is number1 & the value is=%d",number1);
+else
+printf("The smallest number is number3 & the value is=%d",number3);
+}
+else{
+if(number3<number2)
+printf("The smallest number is number3 & the value is=%d",number3);
+else
+printf("The smallest number is number2 & the value is=%d",number2);
+}
+return 0;
+}
+
+
+
+Output:
+Enter the value of three numbers:12
+20
+30
+The smallest number is number1 & the value is=12
