@@ -1,0 +1,18 @@
+# include<stdio.h>
+int ext = 40; /* external declaration*/
+void show();
+void main(){
+	extern int ext;  /* optional declaration */
+	printf ("%d \n", ext);
+	show ();
+	}
+void show() {
+	extern int ext; /* optional declaration*/
+	printf ("%d", ext);
+	}
+
+
+
+Output:
+40 
+40
