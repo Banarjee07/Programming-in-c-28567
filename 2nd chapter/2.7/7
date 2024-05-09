@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include<math.h>
+int main() {
+	 float a;
+	 float area;
+	 printf("Enter size of side of the equilateral triangle : ");
+	 scanf("%f",&a);
+	 area = sqrt(3)/4*(a*a);
+	 printf("Area of equilateral triangle is: %.3f",area);
+	 return 0;
+	}
+
+
+Output:
+Enter size of side of the equilateral triangle : 7
+Area of equilateral triangle is: 21.218
