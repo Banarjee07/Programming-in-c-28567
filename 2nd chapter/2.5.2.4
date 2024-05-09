@@ -1,0 +1,20 @@
+# include<stdio.h>
+void main() {
+	show() ;
+	show();
+	show();
+	//return 0;
+	}
+void show() {
+	auto int a = 7;
+	static int s = 7;
+	printf ("a = %d \t s = %d \n", a, s);
+	++a;
+	++s;
+	}
+
+
+Output:
+a = 7 	 s = 7 
+a = 7 	 s = 8 
+a = 7 	 s = 9 
