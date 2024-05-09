@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+int number1,number2,Result;
+number1=10;
+number2=20;
+Result=number1+number2;
+printf("Summation is=%d",Result);
+//return 0;
+}
+
+
+
+Output:
+Summation is=30
