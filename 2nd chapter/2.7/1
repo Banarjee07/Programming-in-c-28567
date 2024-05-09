@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main() {
+float const PI=3.1416;
+float  r, Area,Circumference;
+printf("Enter the value of r:");
+scanf("%f",&r);
+Area=PI*r*r;
+Circumference=2*PI*r;
+printf("Area of Circle is=%f",Area);
+printf("\nCircumference of Circle is=%f",Circumference);
+return 0;
+}
+
+
+Output:
+Enter the value of r:3
+Area of Circle is=28.274399
+Circumference of Circle is=18.849600
