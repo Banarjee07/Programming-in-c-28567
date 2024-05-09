@@ -7,3 +7,7 @@ for(i=1;i<=100;i++)
 printf("The summation of 12+22+32+....+1002 = %d",sum);
 return 0;
 }
+
+
+Output:
+The summation of 12+22+32+....+1002 = 338350
