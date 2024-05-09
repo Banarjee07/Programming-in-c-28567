@@ -9,3 +9,8 @@ SquareRoot=sqrt(n);
 printf("%d",SquareRoot);
 return 0;
 }
+
+
+Output:
+Enter the value of n:49
+7
