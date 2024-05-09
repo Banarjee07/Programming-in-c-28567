@@ -30,3 +30,27 @@ return 0;
 
 Output:
 Area is = 314.159973
+
+
+
+//Using enum:
+
+# include <stdio.h>
+enum direction{
+    north=1,
+    south=2,
+    east=3,
+    west=4
+};
+int main () {
+enum direction dir=south;
+if(dir==south)
+{
+    printf("Heading South!");
+}
+return 0;
+}
+
+
+Output:
+Heading South!
