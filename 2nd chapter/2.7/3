@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main() 
+{
+float const PI=3.1416;
+float  r, Area,Volume;
+printf("Enter the value of r:");
+scanf("%f",&r);
+Area=4*PI*r*r;
+Volume=(4*PI*r*r*r)/3;
+printf("Area of Sphere is=%f",Area);
+printf("\nVolume of Sphere is=%f",Volume);
+}
+
+
+Output:
+Enter the value of r:3
+Area of Sphere is=113.097595
+Volume of Sphere is=113.097595
