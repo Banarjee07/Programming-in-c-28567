@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+float x,volume;
+printf("Enter the value of x:");
+scanf("%f",&x);
+volume=x*x*x;
+printf("Volume of cube is=%.2f",volume);
+return 0;
+}
+
+
+
+Output:
+Enter the value of x:3
+Volume of cube is=27.00
