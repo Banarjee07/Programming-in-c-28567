@@ -10,3 +10,35 @@ return 0;
 
 Output:
 Value of mean : 3.400000
+
+
+//Internal casting:
+#include <stdio.h>
+int main() {
+	int  i = 17;
+	char c = 'c'; /* ascii value is 99 */
+	float sum;
+	sum = i + c;
+	printf("Value of sum : %f\n", sum );
+return 0;
+}
+
+
+Output:
+Value of sum : 116.000000
+
+
+
+
+//External Casting:
+#include <stdio.h>
+int main() {
+int x=17, y=3;
+float z=(float)x/y; //Cast x to float before division
+printf ("%f",z);
+return 0;
+}
+
+
+Output:
+5.666667
