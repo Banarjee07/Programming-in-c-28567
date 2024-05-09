@@ -1,3 +1,5 @@
+//Using define:
+
 # include <stdio.h>
 # define PI  3.1416  //constant declaration//
 int main () {
@@ -8,7 +10,23 @@ printf ("Area is = %f", Area);
 return 0;
 }
 
+Output:
+Area is = 314.160004
+
+
+
+//Using const:
+
+# include <stdio.h>
+int main () {
+const float PI = 3.1416; //constant declaration//
+float r, Area;
+r = 10;
+Area = PI * r * r;
+printf (" Area is = %f", Area);
+return 0;
+}
 
 
 Output:
-Area is = 314.160004
+Area is = 314.159973
