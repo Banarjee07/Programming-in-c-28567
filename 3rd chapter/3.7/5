@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+	 int num1, num2;
+	printf("\nNumbers Before Exchange : ");
+	printf("\nEnter Number1 : ");
+	scanf("%d", &num1);
+	printf("Enter Number2 : ");
+	scanf("%d", &num2);
+	num1 = num1 ^ num2;
+	num2 = num1 ^ num2;
+	num1 = num1 ^ num2;
+	printf("\n Numbers after Exchange : ");
+	printf("\n Num1 = %d", num1);
+	printf("\n num2 = %d", num2);
+return 0;
+}
+
+
+
+Output:
+Numbers Before Exchange : 
+Enter Number1 : 10
+Enter Number2 : 20
+
+ Numbers after Exchange : 
+ Num1 = 20
+ num2 = 10
