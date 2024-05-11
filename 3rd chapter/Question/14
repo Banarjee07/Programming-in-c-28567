@@ -1,0 +1,12 @@
+#include <stdio.h>
+	int main() { 
+		int x=15, y = 50, z = 5, m;
+		m = x <y&&x>z;
+		printf("%d", m);
+	return 0;
+	}
+
+
+
+Output:
+1
