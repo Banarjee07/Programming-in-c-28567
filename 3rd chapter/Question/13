@@ -1,0 +1,13 @@
+#include <stdio.h>
+	int main() { 
+		int divisible = 78965, divisor = 6732, Quotient, remainder;
+		Quotient = divisible/divisor,
+		remainder = divisible%divisor;
+		printf("%d %d", Quotient, remainder);
+	return 0;
+	}
+
+
+
+Output:
+11 4913
