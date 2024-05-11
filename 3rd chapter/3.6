@@ -1,0 +1,14 @@
+# include <stdio.h>
+	int main (){
+	int x = 3, y = 4, z = 2, k = 1, p;
+	p = x < y || x < z && z<k; /*Using no parentheses*/
+	printf (“p = % d”, p);
+	p = (x < y || x < z) && z<k; /*Using parentheses*/
+	printf("\n p = %d", p);
+	return 0;
+	}
+
+
+Output:
+p =  1
+ p = 0
