@@ -1,0 +1,14 @@
+# include <stdio.h>
+	int main()
+ {
+	int width, length, Area_Rectangle;
+	width = 10;
+	length = 30;
+	Area_Rectangle = width*length;
+	printf("Area- of the rectangle = %d\n",Area_Rectangle);
+	return 0;
+	}
+
+ Output:
+ Area- of the rectangle = 300
+ 
