@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+int a,sum;
+sum=0;
+for(a=5;a<=500;a=a+5)
+sum=sum+a;
+printf("5+10+15+........+500=%d",sum);
+return 0;
+}
+
+
+
+Output:
+5+10+15+........+500=25250
