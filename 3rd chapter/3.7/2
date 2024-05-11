@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+int x,y,z,k;
+x=10,y=20,z=30;
+k=(x+y)>z&&(y+z)>x;
+printf("The result of the equation is=%d",k);
+return 0;
+}
+
+
+
+Output:
+The result of the equation is=0
