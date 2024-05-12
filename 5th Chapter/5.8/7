@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+int i,f0=0,f1=1,fibo;
+printf ("%d\t", f0);
+printf("The fibonacci series is:");
+for(i=1;i<=10;i++) {
+	fibo=f0+f1;
+	printf("%d\t",fibo);
+	f1=f0;
+	f0=fibo;
+}
+return 0;
+}
+
+Output:
+Enter the value of n: 100
+The prime number from 1 to 100 are: 
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 
