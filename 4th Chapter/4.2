@@ -1,3 +1,4 @@
+// Using Printf()
 # include <stdio.h>
 	int main() 
 	{ 
@@ -8,3 +9,25 @@
 
 Output:
 Noakhali Ideal Polytechnic Institute.
+
+//using mathematical operation
+# include <stdio.h>
+	int main() 
+	{
+	int x, y, z, P, Q; //P and Q are output variables//
+	printf ("Enter value of x, y &z :");
+	scanf ("%d%d%d",&x,&y,&z);
+	P=(x*x)+(2*x*y)+(y*y);
+	Q=(4*x*y*z)-(x-y);
+	printf ("Value of P = %d ", P);
+	printf ("Value of Q = % d", Q);
+	return 0;
+	} 
+
+
+Output:
+Enter value of x, y &z :4
+5
+3
+Value of P = 81 Value of Q =  241
+
