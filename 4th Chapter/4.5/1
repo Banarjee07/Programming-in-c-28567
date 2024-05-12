@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int main() 
+{
+float a,b,c,S,Triangle_Area;
+printf("Enter the value of a,b,c:");
+scanf("%f%f%f",&a,&b,&c);
+if((a+b)>c && (b+c)>a &&(c+a)>b) 
+{
+S=(a+b+c)/2;
+Triangle_Area=sqrt((S*(S-a)*(S-b)*(S-c)));
+printf("The Triangle Area is =%f",Triangle_Area);
+}
+else
+printf("The Triangle is not Possible");
+return 0;
+}
+
+
+
+Output:
+Enter the value of a,b,c:5
+8
+9
+The Triangle Area is =19.899748
