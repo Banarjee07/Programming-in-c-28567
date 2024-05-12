@@ -1,0 +1,43 @@
+#include<stdio.h>
+int x,y,result;
+int add();
+int sub();
+int mul();
+int div();
+int main()
+{
+printf("Enter the value of x & y :");
+scanf("%d%d",&x,&y);
+add();
+sub();
+mul();
+div();
+return 0;
+}
+int add()
+{
+result=x+y;
+printf("The summation of x & y is =%d",result);
+}
+int sub()
+{
+result=x-y;
+printf("The subtraction of x & y is =%d",result);
+}
+int mul()
+{
+result=x*y;
+printf("The multiplication of x & y is =%d",result);
+}
+int div()
+{
+result=x/y;
+printf("The division of x & y is =%d",result);
+}
+
+
+
+Output:
+Enter the value of x & y :20
+12
+The summation of x & y is =32The subtraction of x & y is =8The multiplication of x & y is =240The division of x & y is =1
