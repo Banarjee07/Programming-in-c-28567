@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() 
+{
+  int n,num,i;
+  int big = 0;  
+  printf("Enter How many numbers: ");
+  scanf("%d",&n);
+  printf("Number %d:",n);
+	for(i=1;i<=n;i++){
+		printf("Number %d: ",i);
+		scanf("%d",&num);
+		if(big<num)
+		big=num;
+  }
+  printf("Largest number is: %d",big);
+return 0;
+}
+
+
+Output:
+Enter How many numbers: 4
+Number 4:Number 1: 10
+Number 2: 9
+Number 3: 12
+Number 4: 21
+Largest number is: 21
