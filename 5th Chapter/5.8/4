@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main(){
+    int marks;
+    printf("Enter an integer number: ");
+    scanf("%d",&marks);
+
+    if(marks>=0 && marks <= 100){
+            if(marks>=80){
+               printf("A+");
+            }
+            else if(marks>=70){
+                printf("A");
+            }
+            else if(marks>=60){
+                printf("A-");
+            }
+            else if(marks>=50){
+                printf("B");
+            }
+            else if(marks>=40){
+                printf("C");
+            }
+            else if(marks>=33){
+                printf("D");
+            }
+            else
+                printf("Fail!!");
+            }
+    else
+        printf("You entered a wrong number!");
+
+return 0;
+}
+
+
+
+Output:
+Enter an integer number: 55
+B
