@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main() 
+{
+int n;
+printf("Enter the value of n:");
+scanf("%d",&n);
+if(n%2==0)
+printf("This is an even number");
+else
+printf("This is an odd number");
+return 0;
+}
+
+
+Output:
+Enter the value of n:13
+This is an odd number
