@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+float i,n,sum=0,average;
+printf("Enter the value of n:");
+scanf("%f",&n);
+for(i=1;i<=n;i++)
+	{sum=sum+i;}
+	average=sum/n;
+printf("The summation of 1+2+3+....+n =%f\n",sum);
+printf("The average of 1+2+3+....+n =%f",average);
+return 0;
+}
+
+
+
+Output:
+Enter the value of n:10
+The summation of 1+2+3+....+n =55.000000
+The average of 1+2+3+....+n =5.500000
