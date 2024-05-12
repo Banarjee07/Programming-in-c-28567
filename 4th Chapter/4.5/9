@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+int main() 
+{
+	char string[] = "Mohammed Mahbub Alam";
+	printf("%d\n",strlen(string));
+return 0;
+}
+
+
+
+Output:
+20
