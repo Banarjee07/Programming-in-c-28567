@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int n,max,i,num;
+	printf("How many Random numbers you want: ");
+	scanf("%d",&n);
+	printf("\nEnter the maximum value of Random number: ");
+	scanf("%d",&max);
+	printf("\n%d random numbers from 0 to %d are:- \n",n,max);
+	for(int i=0; i<=n; i++){
+	num=rand()%max+1;
+	printf("%d\n",num);
+	}
+return 0;
+}
+
+
+
+Output:
+How many Random numbers you want: 5
+
+Enter the maximum value of Random number: 20
+
+5 random numbers from 0 to 20 are:- 
+4
+7
+18
+16
+14
+16
