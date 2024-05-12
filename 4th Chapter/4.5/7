@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() 
+{
+printf("%5.1s","Yes");
+printf("\n%5.3s","Yes");
+printf("\n%1.12s","Yes");
+printf("\n%2.2s","Yes");
+printf("\n%-07.3f",568.673);
+return 0;
+}
+
+
+
+Output:
+    Y
+  Yes
+Yes
+Ye
+568.673
