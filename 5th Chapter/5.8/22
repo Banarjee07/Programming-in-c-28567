@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+	int num,div,res,digit;
+	printf("Enter a number: ");
+	scanf("%d",&num);
+	printf("\nThe digit of the integer is: ");
+	while(num != 0){
+	res = num/10;
+	digit = num%10;
+	printf("%d ",digit);
+	num = res;
+	}
+return 0;
+}
+
+
+
+Output:
+Enter a number: 123
+
+The digit of the integer is: 3 2 1 
