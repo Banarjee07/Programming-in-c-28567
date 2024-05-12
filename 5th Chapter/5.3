@@ -1,0 +1,73 @@
+//Using if statement
+# include < stdio. h>
+	int main ()
+ {
+	int p, q;
+	printf ("Enter the value of p &q:");
+	scanf ("%d %d", &p, &q);
+	if (p > q)
+		printf ("p is greater than q");
+	else
+		printf ("q is greater than p");
+	return 0;
+	}
+
+
+ Output:
+ Enter the value of p &q:10
+12
+q is greater than p
+
+
+//Using nested if
+# include <stdio.h>
+	int main ()
+	{
+	int Age;
+	printf ("Please enter your age : ");
+	scanf ("%d", &Age);
+	if (Age<= 0)
+	printf ("\n You have not borned yet!");
+	if (Age > 0 && Age <= 12)
+	printf (" \n You are a child.");
+	if (Age > 12 && Age <= 19)
+	printf (" \n You are a teenager.");
+	if (Age > 19 && Age <= 40)
+	printf (" \n You are young.");
+	if (Age>40)
+	printf (" \nWish your long life.");
+	return 0;
+	}
+
+
+Output:
+Please enter your age : 28
+ 
+ You are young.
+
+
+ //Using if-else
+ # include <stdio.h>
+	int main ()
+	{
+	int a, b, c, d;
+	printf ("Enter the values of a, b, &c: ");
+	scanf ("%d %d %d", &a, &b, &c);
+	d = b*b-4*a*c;
+	if (d >= 0)
+	{
+	printf ("Roots are real.");
+	}
+	else
+	{
+	printf ("Roots are imaginary.");
+	}
+	return 0;
+	}
+
+
+Output:
+Enter the values of a, b, &c: 2
+3
+1
+Roots are real.
