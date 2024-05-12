@@ -71,3 +71,239 @@ Enter the values of a, b, &c: 2
 3
 1
 Roots are real.
+
+
+//Nested if-else
+#include<stdio.h>
+	int main()
+	{
+	int number1,number2,number3;
+	printf("Enter the value of three numbers:");
+	scanf("%d%d%d",&number1,&number2,&number3);
+	if(number1>number2)
+	{
+	if(number1>number3)
+	printf("The largest number is number1 & the value is=%d",number1);
+	else
+	printf("The largest number is number3 & the value is=%d",number3);
+	}
+	else{
+	if(number3>number2)
+	printf("The largest number is number3 & the value is=%d",number3);
+	else
+	printf("The largest number is number2 & the value is=%d",number2);
+	}
+	return 0;
+	}
+
+
+Output:
+Enter the value of three numbers:10
+12
+9
+The largest number is number2 & the value is=12
+
+
+//Using Else if
+# include <stdio.h>
+	int main ()
+	{
+	int marks;
+	printf ("Enter the marks = ");
+	scanf ("%d", &marks);
+	if (marks >89)
+	printf ("Your letter grade is : A+");
+	else if (marks> 59)
+	printf ("Your letter grade is : A");
+	else if (marks>49)
+	printf ("Your letter grade is : B");
+	else if (marks>39)
+	printf ("Your letter grade is : C");
+	else
+	printf ("Your letter grade is : F");
+	return 0;
+	}
+
+
+Output:
+Enter the marks = 81
+Your letter grade is : A
+
+
+
+//Using Switch
+#include <stdio.h>
+
+int main() {
+    int marks, index;
+    printf("Enter the marks: ");
+    scanf("%d", &marks);
+    index = marks / 10;
+    
+    switch (index) {
+        case 10:
+        case 9:
+            printf("Your grade is: A+");
+            break;
+        case 8:
+            printf("Your grade is: A");
+            break;
+        case 7:
+            printf("Your grade is: B");
+            break;
+        case 6:
+            printf("Your grade is: C");
+            break;
+        case 5:
+            printf("Your grade is: D");
+            break;
+        case 4:
+            printf("Your grade is: E");
+            break;
+        default:
+            printf("Your grade is: F");
+            break;
+    }
+    
+    return 0;
+}
+
+
+Output:
+Enter the marks: 99
+Your grade is: A+
+
+//Using Switch with menu driven
+#include<stdio.h>
+
+void add();
+void sub();
+void mul();
+void division();
+
+int x, y, result;
+
+int main() {
+    char ch;
+    
+    printf("\nEnter the value of x & y: ");
+    scanf("%d %d", &x, &y);
+    
+    printf("\nPlease Enter Your Choice (1, 2, 3, 4): ");
+    scanf(" %c", &ch); // Note the space before %c to consume any whitespace characters (like newline) left in the input buffer
+    
+    switch (ch) {
+        case '1':
+            add();
+            break;
+        case '2':
+            sub();
+            break;
+        case '3':
+            mul();
+            break;
+        case '4':
+            division();
+            break;
+        default:
+            printf("Invalid Choice!\n");
+            break;
+    }
+    
+    return 0;
+}
+
+void add() {
+    result = x + y;
+    printf("The summation of x & y is = %d\n", result);
+}
+
+void sub() {
+    result = x - y;
+    printf("The subtraction of x & y is = %d\n", result);
+}
+
+void mul() {
+    result = x * y;
+    printf("The multiplication of x & y is = %d\n", result);
+}
+
+void division() {
+    if (y != 0) {
+        result = x / y;
+        printf("The division of x & y is = %d\n", result);
+    } else {
+        printf("Error: Division by zero!\n");
+    }
+}
+
+
+Output:
+Enter the value of x & y: 12
+8
+
+Please Enter Your Choice (1, 2, 3, 4): 3
+The multiplication of x & y is = 96
+
+
+//nested switch
+#include <stdio.h>
+ 
+int main ()
+{
+    int a = 100;
+   int b = 200;
+ 
+   switch(a) {
+      case 100: 
+         printf("This is the value of outer switch%d\n", a );
+         switch(b) {
+            case 200:
+               printf("This is the value of inner switch%d\n", b);
+         }
+   }
+   printf("Exact value of a is : %d\n", a );
+   printf("Exact value of b is : %d\n", b );
+    return 0;
+}
+
+Output:
+This is the value of outer switch100
+This is the value of inner switch200
+Exact value of a is : 100
+Exact value of b is : 200
+
+
+//Using Goto Statement
+# include <stdio.h>
+int main ()
+{
+int x;
+long fact = 1;
+XX :
+printf ("\n Enter a positive integer : ");
+scanf ("%d", &x);
+if (x < 0)
+{
+printf (" \nNegative Number not allowed! (Enter Again):");
+goto XX;
+}
+else if (x== 0)
+printf ("\n Factorial of %d is : %ld", x, fact);
+else
+{
+for (int i= 2; i <=x; i++)
+fact = fact *i;
+printf (" \n Factorial of %d is : %ld", x, fact);
+}
+return 0;
+}
+
+
+Output:
+ Enter a positive integer : 12
+ 
+ Factorial of 12 is : 479001600
+
+
+
