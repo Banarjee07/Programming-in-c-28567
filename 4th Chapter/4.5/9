@@ -1,13 +1,19 @@
-#include<stdio.h>
-#include<string.h>
-int main() 
-{
-	char string[] = "Mohammed Mahbub Alam";
-	printf("%d\n",strlen(string));
-return 0;
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char string[] = "Mohammed Mahbub Alam";
+    int length = strlen(string);
+    
+    for (int i = 0; i < length; i++) {
+        string[i] = tolower(string[i]);
+    }
+    
+    printf("%s\n", string);
+    return 0;
 }
 
 
-
 Output:
-20
+mohammed mahbub alam
