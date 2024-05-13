@@ -1,14 +1,25 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
-int compare_string(const char*, const char*);
+int compare_string(const char *first, const char *second);
 
 int main() {
     char first[100], second[100];
     printf("Enter first string\n");
-    fgets(first, sizeof(first), stdin);
+    int i = 0;
+    char c;
+    while ((c = getchar()) != '\n' && i < 99) {
+        first[i++] = c;
+    }
+    first[i] = '\0';
+
     printf("Enter second string\n");
-    fgets(second, sizeof(second), stdin);
+    i = 0;
+    while ((c = getchar()) != '\n' && i < 99) {
+        second[i++] = c;
+    }
+    second[i] = '\0';
+
     int result = compare_string(first, second);
     if (result == 0)
         printf("Both strings are the same.\n");
@@ -29,6 +40,7 @@ int compare_string(const char *first, const char *second) {
     else
         return -1;
 }
+
 
 
 
