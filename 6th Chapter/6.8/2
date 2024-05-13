@@ -6,7 +6,6 @@ int main() {
     int x = 5, y = 10, *max;
     max = greater(&x, &y);
     printf("largest value = %d\n", *max);
-    getchar(); // Wait for user input
     return 0;
 }
 
