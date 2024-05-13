@@ -1,0 +1,128 @@
+//5.1
+#include<stdio.h>
+int main()
+{
+    int num1,num2,num3;
+    printf("Enter the value  of num1:");
+    scanf("%d",&num1);
+    printf("Enter the value of num2:");
+    scanf("%d",&num2);
+    printf("Enter the value of num3:");
+    scanf("%d",&num3);
+    if(num1>num2)
+    {
+        if(num1>num3)
+        {
+            printf("The Largest number is = %d\n",num1);
+        }
+        else
+        {
+            printf("The Largest number is = %d",num3);
+        }
+    }
+    else
+    {
+        if(num2>num3)
+        {
+            printf("The Largest number is = %d\n",num2);
+        }
+        else
+        {
+            printf("The Largest number is = %d",num3);
+        }
+    }
+    return 0;
+}
+
+
+Output:
+Enter the value  of num1:1500
+Enter the value of num2:250
+Enter the value of num3:545
+The Largest number is = 1500
+
+
+//5.2
+    #include<stdio.h>
+    #include<math.h>
+    int main(){
+      float a,b,c;
+      float d,root1,root2;
+      printf("Enter a, b and c of quadratic equation: ");
+      scanf("%f%f%f",&a,&b,&c);
+      d = b * b - 4 * a * c;
+      if(d < 0){
+        printf("Roots are complex number.\n");
+        return 0;
+        }
+      else if(d==0){
+       printf("Both roots are equal.\n");
+       root1 = -b /(2* a);
+       printf("Root of quadratic equation is: %.3f ",root1);
+       return 0;
+      }
+      else{
+       printf("Roots are real numbers.\n");
+       root1 = ( -b + sqrt(d)) / (2* a);
+       root2 = ( -b - sqrt(d)) / (2* a);
+       printf("Roots of quadratic equation are: %.3f , %.3f",root1,root2);
+      }
+      return 0;
+    }
+
+
+Output:
+Enter a, b and c of quadratic equation: 2
+3
+1
+Roots are real numbers.
+Roots of quadratic equation are: -0.500 , -1.000
+
+
+//5.3
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+    char str[100];
+    int j, len, vowel, consonant;
+    /* Input strings from user */
+    printf("Enter any string: ");
+    gets(str);
+    vowel = 0;
+   consonant = 0;
+    len = strlen(str);
+
+    for(j=0; j<len; j++)
+    {
+        if((str[j]>='a' && str[j]<='z') || (str[j]>='A' && str[j]<='Z'))
+        {
+            switch(str[j])
+            {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    vowel++;
+                    break;
+                default:
+                   consonant++;
+            }
+        }
+    }
+    printf("Total number of vowel = %d\n", vowel);
+    printf("Total number of consonant = %d\n", consonant);
+    return 0;
+}
+
+
+Output:
+Enter any string: haque
+Total number of vowel = 3
+Total number of consonant = 2
