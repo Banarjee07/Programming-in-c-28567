@@ -1,0 +1,19 @@
+#include<stdio.h>
+#define PI 3.1416
+void Circle();
+void Circle()
+{
+float r,Circle_Area;
+printf("Enter the value of Radius:");
+scanf("%f",&r);
+Circle_Area=PI*r*r;
+printf("The Area of Circle is=%f",Circle_Area);
+}
+void main()
+{
+Circle();
+}
+
+Output:
+Enter the value of Radius:3
+The Area of Circle is=28.274401
