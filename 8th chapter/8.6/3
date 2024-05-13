@@ -1,0 +1,29 @@
+#include<stdio.h>
+void swap();
+void swap()
+{
+ int i,j,temp;
+printf("The value of i & j:");
+scanf("%d%d",&i,&j);
+printf("Before Swapping:");
+printf("\nThe value of i=%d,j=%d",i,j);
+temp=i;
+i=j;
+j=temp;
+printf("\nAfter Swapping:");
+printf("\nThe value of i=%d,j=%d",i,j);
+}
+void main()
+{
+swap();
+}
+
+
+
+Output:
+The value of i & j:20
+30
+Before Swapping:
+The value of i=20,j=30
+After Swapping:
+The value of i=30,j=20
