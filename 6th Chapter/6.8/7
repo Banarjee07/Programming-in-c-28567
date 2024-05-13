@@ -1,0 +1,50 @@
+#include <stdio.h>
+struct StdInfo
+{
+    long Roll;
+    char Name[22];
+    char Semester[10];
+    float Marks;
+};
+
+int main()
+{
+    struct StdInfo S, *Sptr;
+    Sptr = &S;
+
+    printf("Enter Roll: ");
+    scanf("%ld", &Sptr->Roll);  // Use %ld for long data type
+
+    printf("\nEnter Name: ");
+    scanf("%s", Sptr->Name);
+
+    printf("\nEnter Semester: ");
+    scanf("%s", Sptr->Semester);
+
+    printf("\nEnter Marks: ");
+    scanf("%f", &Sptr->Marks);
+
+    printf("\n\nRoll: %ld", Sptr->Roll);
+    printf("\nName: %s", Sptr->Name);
+    printf("\nSemester: %s", Sptr->Semester);
+    printf("\nMarks: %.2f", Sptr->Marks);
+
+    return 0;
+}
+
+
+
+Output:
+Enter Roll: 735647
+
+Enter Name: Shuvo
+
+Enter Semester: 4th
+
+Enter Marks: 744
+
+
+Roll: 735647
+Name: Shuvo
+Semester: 4th
+Marks: 744.00
