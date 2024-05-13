@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+void change_value(int *x)
+{
+    *x = *x + 5;
+}
+int main(){
+    int a = 25;
+    change_value(&a);
+    printf("a =  %d",a);
+    return 0;
+}
+
+
+output:
+a =  30
