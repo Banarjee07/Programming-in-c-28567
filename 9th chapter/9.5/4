@@ -1,0 +1,19 @@
+#include<stdio.h>
+struct shape
+{
+float area;
+float perimeter;
+}
+circle={5.0,38.37};
+int main()
+{
+printf("Circle Area is =%.2f",circle.area);
+printf("\nCircle perimeter is =%.2f",circle.perimeter);
+return 0;
+}
+
+
+
+Output:
+Circle Area is =5.00
+Circle perimeter is =38.37
