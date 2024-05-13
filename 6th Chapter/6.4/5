@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+void main() 
+{
+  char str[100];
+  int i;
+  printf("Enter any string:");
+  scanf("%s",str);
+  printf("The string is:%s",str);
+  for(i=0;i<=strlen(str);i++){
+	if(str[i]>=97&&str[i]<=122)
+	str[i]=str[i]-32;
+  }
+  printf("\nThe string in uppercase is:%s",str);
+}
+
+
+Output:
+Enter any string:haque_publications_limited
+The string is:haque_publications_limited
+The string in uppercase is:HAQUE_PUBLICATIONS_LIMITED
