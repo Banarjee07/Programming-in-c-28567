@@ -1,0 +1,27 @@
+#include<stdio.h>
+void main()
+{
+int number[10],i,summation=0;
+printf("Enter 10 integer Numbers:");
+for(i=0;i<=9;i++)
+	scanf("%d",&number[i]);
+for(i=0;i<=9;i++)
+	summation=summation+number[i];
+printf("\nSummation is=%d",summation);
+
+}
+
+
+Output:
+Enter 10 integer Numbers:12
+14
+16
+22
+24
+21
+33
+9
+7
+35
+
+Summation is=193
