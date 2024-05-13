@@ -1,0 +1,27 @@
+#include <stdio.h>
+int Sum(); // Function prototype
+int main() 
+{
+    Sum(); // Function call
+    return 0;
+}
+int Sum() { // Function definition
+    int value1, value2, Sum;
+    printf("Enter value1: ");
+    scanf("%d", &value1);
+    printf("Enter value2: ");
+    scanf("%d", &value2);
+    Sum = value1 + value2;
+    printf("\nvalue1 = %d\nvalue2 = %d", value1, value2);
+    printf("\nSum = %d\n", Sum);
+    return Sum;
+}
+
+
+Output:
+Enter value1: 10
+Enter value2: 12
+
+value1 = 10
+value2 = 12
+Sum = 22
