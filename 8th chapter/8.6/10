@@ -1,0 +1,23 @@
+#include<stdio.h>
+int fact(int);
+int main(){
+    int n, r, ncr;
+    printf("Enter the value of n & r: ");
+    scanf("%d %d", &n, &r);
+    ncr = fact(n) / (fact(r) * fact(n - r)); // Replaced the dash character with a regular minus sign -
+    printf("The NCR factor of %d and %d is: %d", n, r, ncr);
+    return 0;
+}
+int fact(int n){
+    int i = 1;
+    while(n != 0){
+        i = i * n;
+        n--;
+    }
+    return i;
+}
+
+Output:
+Enter the value of n & r: 5
+3
+The NCR factor of 5 and 3 is: 10
