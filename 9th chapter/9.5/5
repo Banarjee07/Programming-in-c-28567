@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h> // for system("cls") in delay()
+
+#define DELAY 12800
+
+struct mytime {
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+void display(struct mytime *t);
+void update(struct mytime *t);
+void delay(void); // Declaration
+
+int main(void) {
+    struct mytime systime;
+    systime.hours = 0;
+    systime.minutes = 0;
+    systime.seconds = 0;
+
+    for (;;) {
+        update(&systime);
+        display(&systime);
+    }
+
+    return 0;
+}
+
+void display(struct mytime *t) {
+    // Use proper formatting to display hours, minutes, and seconds
+    printf("%02d:%02d:%02d\n", t->hours, t->minutes, t->seconds);
+}
+
+void update(struct mytime *t) {
+    t->seconds++;
+    if (t->seconds == 60) {
+        t->seconds = 0;
+        t->minutes++;
+
+        if (t->minutes == 60) {
+            t->minutes = 0;
+            t->hours++;
+
+            if (t->hours == 24) {
+                t->hours = 0;
+                delay();
+            }
+        }
+    }
+}
+
+void delay(void) {
+   long int t;
+   for(t=1; t<DELAY; t++);
+}
