@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+void main() 
+{
+  char str[20];
+  int i;
+  printf("Enter any string:");
+  scanf("%s",str);
+  printf("The string is:%s",str);
+  for(i=0;i<=strlen(str);i++){
+		if(str[i]>=65&&str[i]<=90)
+		 str[i]=str[i]+32;
+  }
+  printf("\nThe string in lower case is:%s",str);
+}
+
+
+Output:
+Enter any string:HAQUE_PUBLICATIONS_LIMITED
+The string is:HAQUE_PUBLICATIONS_LIMITED
+The string in lower case is:haque_publications_limited
