@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+int number[12]={32,33,39,25,42,33,45,17,15,65,75,84};
+int i,j,temp;
+printf("Data Before Sorting:");
+for(i=0;i<12;i++)
+printf("\t%d",number[i]);
+printf("\nData After Sorting:");
+for(i=0;i<11;i++)
+{
+for(j=i+1;j<12;j++)
+{
+if(number[i]<number[j])
+{
+temp=number[j];
+number[j]=number[i];
+number[i]=temp;
+}
+}
+}
+for(i=0;i<12;i++)
+printf("\t%d",number[i]);
+}
+
+
+Output:
+Data Before Sorting:	32	33	39	25	42	33	45	17	15	65	75	84
+Data After Sorting:	84	75	65	45	42	39	33	33	32	25	17	15
