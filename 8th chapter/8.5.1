@@ -1,0 +1,20 @@
+#include<stdio.h>
+long int factorial(int n);
+void main()
+{
+int n;
+printf("Enter the value of n:");
+scanf("%d",&n);
+printf("Factorial of %d is=%d",n,factorial(n));
+}
+long int factorial(int n)
+{if(n<=1)
+return(1);
+else
+return(n*factorial(n-1));
+}
+
+
+Output:
+Enter the value of n:5
+Factorial of 5 is=120
