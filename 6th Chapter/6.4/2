@@ -1,0 +1,31 @@
+#include<stdio.h>
+void main()
+{
+int marks[10],i,Total=0;
+float Average;
+printf("Enter the marks of 10 subjects:");
+for(i=0;i<=9;i++)
+	scanf("%d",&marks[i]);
+for(i=0;i<=9;i++)
+	Total=Total+marks[i];
+Average=Total/10;
+printf("\nTotal Mark is=%d",Total);
+printf("\nAverage mark is=%f",Average);
+
+}
+
+
+Output:
+Enter the marks of 10 subjects:72
+45
+69
+39
+46
+89
+78
+68
+96
+88
+
+Total Mark is=690
+Average mark is=69.000000
