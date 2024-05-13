@@ -1,0 +1,108 @@
+//Call by reference
+#include<stdio.h> 
+void swap( int *x, int *y )              // call by reference
+{
+int t ;
+t = *x ;
+*x = *y ;
+*y = t ;
+printf( "\nx = %d y = %d", *x,*y);
+}
+int main( )
+{
+int a = 10, b = 20 ;
+swap ( &a, &b ) ;                   // passing the address of values to be swapped
+return 0;
+}
+
+
+Output:
+x = 20 y = 10
+
+
+//Call by value
+#include<stdio.h>
+void swap( int x, int y )                     // call by Value
+{
+int t ;
+t = x ;
+x =y ;
+ y = t ;
+printf( "\nx = %d y = %d", x,y);
+}
+int main( )
+{
+int a = 10, b = 20;
+printf ( "\na = %d b = %d", a, b );
+swap ( a, b ) ;                         // passing the address of values to be swapped
+}
+
+
+Output:
+a = 10 b = 20
+x = 20 y = 10
+
+
+//Arguement variable
+#include<stdio.h>
+float Total(float mark1,float mark2)
+{
+    float Total;
+    Total = mark1 + mark2;
+    printf("\n Mark1: %.2f",mark1);
+    printf("\t Mark2: %.2f",mark2);
+    printf("\tTotal: %.2f",Total);
+}
+int main(){
+    Total(25.35,40.75);
+    Total(36.50,38.50);
+    Total(23.50,40);
+
+return 0;
+}
+
+
+Output:
+ Mark1: 25.35	 Mark2: 40.75	Total: 66.10
+ Mark1: 36.50	 Mark2: 38.50	Total: 75.00
+ Mark1: 23.50	 Mark2: 40.00	Total: 63.50
+
+
+ //Formal and actual argument
+ #include <stdio.h>
+void sum(int i, int j, int k) /* formal arguments*/
+{
+int s;
+s = i + j + k;
+printf("summation is= %d", s);
+}
+int main()
+{
+sum(5,10,15);		// actual arguments
+return 0;
+}
+
+
+Output:
+summation is= 30
+
+
+//Command line argument
+#include<stdio.h>
+#include <stdlib.h>
+void main(int argc, char * argv[])
+	{
+	int i, sum = 0;
+	if (argc != 3) {
+	printf("You have forgot to type numbers.");
+	exit(1);
+	}
+	printf("The sum is : ");
+	for (i = 1; i < argc; i++)
+	sum = sum + atoi(argv[i]);
+	printf("%d", sum);
+}
+
+
+Output:
+ou have forgot to type numbers.
