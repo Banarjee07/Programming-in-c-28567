@@ -1,0 +1,38 @@
+//Date and time
+#include <stdio.h>
+int main() 
+{
+    printf("\nCurrent Date is : %s", __DATE__);
+    printf("\nCurrent Time is : %s", __TIME__);
+    printf("\nRunning File is : %s", __FILE__);
+    printf("\nNumber of Lines : %d\n", __LINE__);
+    return 0;
+}
+
+
+Output:
+Current Date is : May 13 2024
+Current Time is : 05:33:19
+Running File is : /tmp/yX2Rh5Hd7j.c
+Number of Lines : 7
+
+
+//User defined Macro
+#include <stdio.h>
+#define Sum(x, y) ((x) + (y))
+#define Max(x, y) ((x) > (y) ? (x) : (y))
+#define THANKS printf("\nThanking you...........");
+
+int main() {
+    int x = 5, y = 10;
+    printf("\nSum of %d and %d is : %d", x, y, Sum(x, y));
+    printf("\nMax of %d and %d is : %d", x, y, Max(x, y));
+    THANKS
+    return 0;
+}
+
+
+Output:
+Sum of 5 and 10 is : 15
+Max of 5 and 10 is : 10
+Thanking you...........
