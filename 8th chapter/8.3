@@ -1,0 +1,136 @@
+//Using Show()
+# include <stdio.h>
+	void hello() 
+	{
+	printf ("Hello, Friend!");
+	}
+	void show ()
+	{
+	hello (); /* calling hello function */
+	}
+	void main ()
+	{
+	show (); /* calling hello function */
+	}
+
+
+Output:
+Hello, Friend!
+
+
+//Using Returning function- 1
+# include <stdio.h>
+float Total ();
+int main ()
+{
+Total ();
+return 0;
+}
+float Total ()
+{
+float Mark1, Mark2, Total;
+printf (" \nEnter Mark1 :");
+scanf (" %f", & Mark1);
+printf (" \nEnter Mark2 : ");
+scanf (" %f", & Mark2);
+Total = Mark1 + Mark2;
+printf (" \n\n Total Marks : %.2f", Total);
+return (Total);
+}
+
+
+Output:
+Enter Mark1 :55
+ 
+Enter Mark2 : 85
+ 
+
+ Total Marks : 140.00
+
+
+
+ //Using Returning function- 2
+
+ # include <stdio.h>
+float Total ();
+int main ()
+{
+float Tutorial, GTotal;
+printf ("Enter Tutorial Mark :");
+scanf (" %f", & Tutorial);
+GTotal = Total () + Tutorial;
+printf (" \n Grand Total : %.2f", GTotal);
+return 0;
+}
+float Total ()
+{
+float Mark1, Mark2, Total;
+printf ("Enter Mark1 : ");
+scanf ("%f", & Mark1);
+printf ("Enter mark2 : ");
+scanf (" %f", & Mark2);
+Total = Mark1 + Mark2;
+return (Total);
+}
+
+
+Output:
+Enter Tutorial Mark :88
+Enter Mark1 : 56
+Enter mark2 : 77
+Grand Total : 221.00
+
+
+//Using Returning function- 3
+# include <stdio.h>
+int main ()
+{
+printf ("Object oriented Programming \n");
+printf ("Objct Oriented Programming \n");
+return (0);
+printf ("Object Oriented Programming \n");
+printf ("Object Oriented Programming \n");
+printf ("Object Oriented Programming \n");
+}
+
+Output:
+Object oriented Programming 
+Objct Oriented Programming 
+
+
+//Multiple return statements
+#include <stdio.h>
+
+float Total(); // Function prototype
+
+int main() {
+    float Tutorial, GTotal;
+    printf("Enter Tutorial Mark: ");
+    scanf("%f", &Tutorial);
+    GTotal = Total() + Tutorial;
+    printf("\nGrand Total: %.2f", GTotal);
+    return 0;
+}
+
+float Total() {
+    float Mark1, Mark2, Total1;
+    printf("Enter Mark1: ");
+    scanf("%f", &Mark1);
+    printf("Enter Mark2: ");
+    scanf("%f", &Mark2);
+    if (Mark2 <= 0) // Corrected the comparison operator
+        return Mark1;
+    else {
+        Total1 = Mark1 + Mark2; // Corrected the variable name
+        return Total1; // Corrected the variable name
+    }
+}
+
+
+
+Output:
+Enter Tutorial Mark: 55
+Enter Mark1: 85
+Enter Mark2: 79
+
+Grand Total: 219.00
