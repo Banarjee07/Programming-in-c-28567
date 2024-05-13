@@ -1,0 +1,67 @@
+//3.1
+#include <stdio.h>
+int main ()
+{
+    int ndays, y, m, d;
+    printf("Input no of days: ");
+    scanf("%d", &ndays);
+    y = (int) ndays/365;
+    ndays = ndays%365;
+    m = (int)ndays/30;
+    d = (int)ndays%30;
+    printf(" %d Year(s) \n %d Month(s) \n %d Day(s)", y, m, d);
+    return 0;
+}
+
+
+Output:
+Input no of days: 32
+ 0 Year(s) 
+ 1 Month(s) 
+ 2 Day(s)
+
+ //3.2
+ #include<stdio.h>
+#define c 0.5
+int main()
+{   int b,h;
+    float T_Area;
+    printf("Enter the value of Base:");
+    scanf("%d",&b);
+    printf("Enter the value of Height:");
+    scanf("%d",&h);
+    T_Area=c*b*h;
+    printf("The Area of Triangle  is = %.3f:\n",T_Area);
+    return 0;
+}
+
+
+Output:
+Enter the value of Base:10
+Enter the value of Height:15
+The Area of Triangle  is = 75.000:
+
+//3.3
+#include<stdio.h>
+int main()
+{   int num1,num2;
+    printf("Enter the value  of num1:");
+    scanf("%d",&num1);
+    printf("Enter the value of num2:");
+    scanf("%d",&num2);
+    if(num1>num2)
+    {
+       printf("The Largest number is num1= %d\n",num1);
+    }
+    else
+    {
+          printf("The Largest number is num2= %d",num2);
+    }
+return 0;
+}
+
+
+Output:
+Enter the value  of num1:12
+Enter the value of num2:10
+The Largest number is num1= 12
