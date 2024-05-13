@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main()
+{
+    int a, b, *p, *q, x, y, z;  // Initialize variables
+    a = 16, b = 4;
+    p = &a;
+    q = &b;
+    x = 4 * -(*q) / *p + 10;  // Corrected the expression
+    y = *p * (*q) + 6 - *p;   // Corrected the expression
+    printf("Address of a = %p \n", (void*)&a);  // Corrected the format specifier and cast
+    printf("Address of b = %p \n", (void*)&b);  // Corrected the format specifier and cast
+    printf("\n");
+    printf("a = %d,  b = %d \n", a, b);
+    printf("x = %d,  y = %d \n", x, y);
+    *p = *p + 2;
+    *q = *p - 4;
+    z = *p * *q - 6;
+    printf("\na = %d,  b = %d", a, b);
+    printf("\nz = %d \n", z);  // Corrected the format specifier
+    return 0;  // Return 0 from main
+}
+
+
+
+Output:
+Address of a = 0x7fff328ad920 
+Address of b = 0x7fff328ad91c 
+
+a = 16,  b = 4 
+x = 9,  y = 54 
+
+a = 18,  b = 14
+z = 246 
