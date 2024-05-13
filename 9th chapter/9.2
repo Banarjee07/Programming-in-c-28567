@@ -1,0 +1,126 @@
+//Using Struct
+# include <stdio.h>
+	struct StdInfo
+	{
+	long Roll;
+	char Name [22];
+	char Semester [10];
+	float Marks;
+	};
+	struct StdInfo S;
+	int main ()
+	{
+	printf ("Enter Roll : ");
+	scanf ("%ld", &S.Roll);
+	printf ("\nEnter Name : ");
+	scanf ("%s", S.Name);
+	printf (" \nEnter Semester :");
+	scanf ("%s", S.Semester);
+	printf (" \nEnter Marks : ");
+	scanf (" %f", &S.Marks);
+	printf (" \n\nRoll : %ld", S.Roll);
+	printf ("\nName : %s", S.Name);
+	printf (" \nSemester : %s", S.Semester);
+	printf ("\nMarks : %2f", S.Marks);
+	return 0;
+	}
+
+
+Output:
+Enter Roll : 174089
+
+Enter Name : Shuvo
+ 
+Enter Semester :4th
+ 
+Enter Marks : 720
+ 
+
+Roll : 174089
+Name : Shuvo 
+Semester : 4th
+Marks : 720.000000
+
+
+
+//Nested Structure
+#include <stdio.h>
+struct Employee
+{
+   char ename[20];
+   int id;
+   float salary;
+   struct date
+       {
+       int date;
+       int month;
+       int year; 
+       }doj;
+}emp = {"Shuvo",1000,1000.50,{22,6,1990}};
+
+int main(int argc, char *argv[])
+{
+printf("\nEmployee Name   : %s",emp.ename);  
+printf("\nEmployee ID    	   : %d",emp.id);  
+printf("\nEmployee Salary  : %f",emp.salary);  
+printf("\nEmployee DOJ     : %d/%d/%d", emp.doj.date,emp.doj.month,emp.doj.year);  
+return 0;
+}
+
+
+
+Output:
+Employee Name   : Shuvo
+Employee ID    	   : 1000
+Employee Salary  : 1000.500000
+Employee DOJ     : 22/6/1990
+
+
+//Using Union
+# include <stdio.h>
+	union Student
+	{
+	long Roll;
+	char Name[10];
+	float Marks;
+	};
+	union Student S;
+	int main() {
+	char ch;
+	printf ("\nPress R for Roll : ");
+	printf (" \nPress N for Name :");
+	printf ("\n Press M for Marks : ");
+	printf (" \nWhich one do you want to access?");
+	scanf ("%c", &ch);
+	switch (ch) {
+	case 'R' :
+		printf ("Enter Roll :");
+		scanf ("%ld", &S.Roll);
+		printf ("\nRoll : %ld", S.Roll);
+		break;
+	case 'N' :
+		printf (" \nEnter Name : ");
+		scanf ("%s", S.Name);
+		printf ("\nName : %s", S.Name);
+		break;
+	case 'M' :
+		printf ("\nEnter Marks : ");
+		scanf ("%f", &S.Marks);
+		printf ("\nMarks : %.2f", S.Marks);
+		break;
+	default :
+		printf (" \n \nSelection Failed!");
+	}
+	return 0;
+	}
+
+
+Output:
+Press R for Roll :  
+Press N for Name :
+ Press M for Marks :  
+Which one do you want to access?M
+
+Enter Marks : 89
+
+Marks : 89.00
