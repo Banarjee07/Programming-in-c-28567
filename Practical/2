@@ -1,0 +1,70 @@
+//2.1
+#include<stdio.h>
+int main()
+{
+    int n,i,num,sum=0;
+    float avg;
+    printf("How many number of input is ?");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+         printf("number input:");
+         scanf("%d",&num);
+         sum=sum+num;
+    }
+   avg=(float)sum/n;
+    printf("The average number of N is :%.3f %d",avg);
+    return 0;
+}
+
+
+Output:
+How many number of input is ?3
+number input:10
+number input:12
+number input:14
+The average number of N is :12.0000
+
+
+//2.2
+#include<stdio.h>
+int main()
+{
+    float c,f;
+    printf("Input Fahrenheit :");
+    scanf("%f",&f);
+    c=(5.0/9.0)*(f-32);
+    printf("The Centigrade temperature= %.0f:\n",c);
+    printf("Input Centigrade %.0f :\n",c);
+    //scanf("%f",&c);
+    f=c*(9.0/5.0)+32;
+    printf("The Fahrenheit temperature= %.0f:",f);
+    return 0;
+}
+
+
+Output:
+Input Fahrenheit :102
+The Centigrade temperature= 39:
+Input Centigrade 39 :
+The Fahrenheit temperature= 102:
+
+
+
+//2.3
+#include<stdio.h>
+#define PI 3.1416
+int main ()
+{
+    float r,C_Area;
+    printf("Enter the value of radius:");
+    scanf("%f",&r);
+    C_Area=PI*r*r;
+    printf("The Area of Circle is = %.3f:\n",C_Area);
+    return 0;
+}
+
+
+Output:
+Enter the value of radius:3
+The Area of Circle is = 28.274:
