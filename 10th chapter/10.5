@@ -1,0 +1,77 @@
+//Read and Write
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+int main(){
+    char ch;
+    int counts = 0;;
+    FILE *myfile;
+    myfile = fopen("MM.txt","w");
+        printf("A file named MM is opened. \n");
+        printf("Enter a line of text and Press ENTER to save: \n");
+        while((ch=getchar()) != '\n'){
+            putc(ch,myfile);
+            counts++;
+        }
+        fclose(myfile);
+     myfile = fopen("MM.txt","r");
+        printf("The file contains: \n");
+        while((ch=fgetc(myfile)) != EOF){
+            putc(ch,stdout);
+        }
+        printf("\nNo. of Characters entered (including blank spaces): %d",counts);
+        fclose(myfile);
+
+return 0;
+}
+
+
+
+Output:
+A file named MM is opened. 
+Enter a line of text and Press ENTER to save: 
+Haque Publications Limited
+The file contains: 
+Haque Publications Limited
+No. of Characters entered (including blank spaces): 26
+
+
+
+//About file program
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    FILE *file;
+    char text[100];
+    // Writing to a file using fputs()
+    file = fopen("example.txt", "w");
+    if (file == NULL) {
+        perror("Error opening file");
+        return 1;
+    }
+    fputs("Hello, this is a sample text.\n", file);
+    fputs("Writing to a file using fputs()\n", file);
+    fclose(file);
+    // Reading from the file using fgets()
+    file = fopen("example.txt", "r");
+    if (file == NULL) {
+        perror("Error opening file");
+        return 1;
+    }
+    printf("Contents of the file:\n");
+    while (fgets(text, sizeof(text), file) != NULL) {
+        printf("%s", text);
+    }
+    fclose(file);
+    return 0;
+}
+
+
+Output:
+Contents of the file:
+Hello, this is a sample text.
+Writing to a file using fputs()
+
+
