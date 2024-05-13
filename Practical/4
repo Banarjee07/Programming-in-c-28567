@@ -1,0 +1,55 @@
+//4.1
+#include<stdio.h>
+int main()
+{
+    int num1=6567,num2=889972;
+    printf("The first integer  number is = %d\n",num1);
+    printf("The second integer number is = %d",num2);
+return 0;
+}
+
+
+Output:
+The first integer  number is = 6567
+The second integer number is = 889972
+
+
+//4.2
+#include<stdio.h>
+int main()
+{
+   float num1,num2,num3,sum;
+   printf("Enter the value of num1:");
+   scanf("%f",&num1);
+   printf("Enter the value of num2:");
+   scanf("%f",&num2);
+   printf("Enter the value of num3:");
+   scanf("%f",&num3);
+   sum=num1+num2+num3;
+   printf("The Sumation of three floating point number is:%f",sum);
+   return 0;
+}
+
+Output:
+Enter the value of num1:3.5
+Enter the value of num2:4.2
+Enter the value of num3:3.3
+The Sumation of three floating point number is:11.000000
+
+
+//4.3
+#include<stdio.h>
+int main()
+{
+    float centimeter,inch;
+    printf("Enter the value of centimeter :");
+    scanf("%f",&centimeter);
+    inch=centimeter/2.54;
+    printf("The inch is= %.3f:\n",inch);
+    return 0;
+}
+
+
+Output:
+Enter the value of centimeter :130
+The inch is= 51.181:
