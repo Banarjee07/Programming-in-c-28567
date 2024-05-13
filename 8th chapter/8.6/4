@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+
+int factorial(int n)
+{
+    if(n==0){
+        return 1;
+    }
+    else{
+        return n*factorial(n-1);
+    }
+}
+int main(){
+    int n;
+    printf("Enter a positive number: ");
+    scanf("%d",&n);
+    if(n<0){
+        printf("You entered a negative number try again!!");
+    }
+    else{
+        printf("The factorial of %d is: %d",n,factorial(n));
+    }
+return 0;
+}
+
+
+
+Output:
+Enter a positive number: 5
+The factorial of 5 is: 120
+
