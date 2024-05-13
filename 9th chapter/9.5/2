@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+#define Max 10
+
+struct Student {
+    long Roll;  // 4 Bytes
+    char Name[22];  // 22 Bytes
+    float Marks;  // 4 Bytes
+};
+
+int main() {
+    struct Student S[Max];
+    int N;
+    printf("Enter Number of Students (<10): ");
+    scanf("%d", &N);
+    for (int C = 0; C < N; C++) {
+        printf("\nEnter record of S[%d]:", C + 1);
+        printf("\nEnter Roll: ");
+        scanf("%ld", &S[C].Roll);  // Changed %1d to %ld
+        printf("Enter Name: ");
+        scanf("%21s", S[C].Name);  // Limited the number of characters read
+        printf("Enter Marks: ");
+        scanf("%f", &S[C].Marks);
+    }
+    for (int C = 0; C < N; C++) {  // Added data type declaration for loop counter
+        printf("\nThe Record of S[%d]:", C + 1);
+        printf("\nRoll: %ld", S[C].Roll);
+        printf("\nName: %s", S[C].Name);
+        printf("\nMarks: %.2f\n", S[C].Marks);
+    }
+    return 0;
+}
+
+
+Output:
+Enter Number of Students (<10): 3
+
+Enter record of S[1]:
+Enter Roll: 1
+Enter Name: shuvo
+Enter Marks: 120
+
+Enter record of S[2]:
+Enter Roll: 2
+Enter Name: Utpal
+Enter Marks: 121
+
+Enter record of S[3]:
+Enter Roll: 3
+Enter Name: sushil
+Enter Marks: 122
+
+The Record of S[1]:
+Roll: 1
+Name: shuvo
+Marks: 120.00
+
+The Record of S[2]:
+Roll: 2
+Name: Utpal
+Marks: 121.00
+
+The Record of S[3]:
+Roll: 3
+Name: sushil
+Marks: 122.00
