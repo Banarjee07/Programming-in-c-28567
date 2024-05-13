@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main() {
+    struct book {
+        char name[25];
+        char author[25];
+        int ph_no;
+    };
+
+    struct book b1 = {"C programming", "MAK", 203};
+    struct book *ptr;
+    ptr = &b1;
+
+    printf("\n%s %s %d", b1.name, b1.author, b1.ph_no);
+    printf("\n%s %s %d", ptr->name, ptr->author, ptr->ph_no);
+}
+
+
+
+Output:
+C programming MAK 203
+C programming MAK 203
