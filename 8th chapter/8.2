@@ -1,0 +1,25 @@
+#include <stdio.h>
+int add (int a, int b);
+int main ( )
+{
+int sum;
+int a, b;
+printf ("Enter the first and second number \n");
+scanf ("%d %d", & a, & b);
+sum = add (a, b); // call add ( ) function
+printf ("The sum of the two number is %d", sum);
+}
+int add (int n1, int n2) // pass n1 and n2 parameter
+{
+int c;
+c = n1 + n2;
+return c;
+}
+
+
+
+Output:
+Enter the first and second number 
+10
+12
+The sum of the two number is 22
