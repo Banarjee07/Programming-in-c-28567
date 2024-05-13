@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int *greater(int *a, int *b);
+
+int main() {
+    int x = 5, y = 10, *max;
+    max = greater(&x, &y);
+    printf("largest value = %d\n", *max);
+    getchar(); // Wait for user input
+    return 0;
+}
+
+int *greater(int *a, int *b) {
+    if (*b > *a) 
+        return b;
+    return a;
+}
+
+
+Output:
+largest value = 10
