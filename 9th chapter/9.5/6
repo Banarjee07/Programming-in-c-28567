@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#define NUM_STUDENTS 3
-#define NUM_SUBJECTS 3
+#define NUM_STUDENTS 3  //Here for 3 students
+#define NUM_SUBJECTS 3  //Here for 3 subjects
 
 struct Student {
     int id;
