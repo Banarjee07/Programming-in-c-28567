@@ -1,0 +1,107 @@
+//9.1
+#include<stdio.h>
+#define c 0.5
+float area(float,float);
+
+int main()
+{
+    float Area,b,h;
+    printf("Enter the value of Base:");
+    scanf("%f",&b);
+    printf("Enter the value of Height:");
+    scanf("%f",&h);
+    Area=area(b,h);
+    printf("The Area of a Triangle  is = %.3f:\n",Area);
+    return 0;
+}
+ float area(float b,float h)
+    {
+      return(c*b*h);
+    }
+
+
+Output:
+Enter the value of Base:12
+Enter the value of Height:15
+The Area of a Triangle  is = 90.000:
+
+
+//9.2
+#include<stdio.h>
+void asc_sort(int a[10], int n);
+void main()
+{
+ int a[10], i, n;
+ printf("Enter the number:");
+ scanf("%d", &n);
+ for(i=0;i< n;i++)
+ {
+  printf("number a[%d]=",i);
+  scanf("%d", &a[i]);
+ }
+ asc_sort(a,n);
+ printf("Array in ascending order is:\n");
+ for(i=0;i< n;i++)
+ {
+  printf(" %d", a[i]);
+ }
+}
+void asc_sort(int a[10], int n)
+{
+ int i, j, temp;
+ for(i=0;i< n-1;i++)
+ {
+  for(j=i+1;j< n;j++)
+  {
+   if(a[i]>a[j])
+   {
+    temp = a[i];
+    a[i] = a[j];
+    a[j] = temp;
+   }
+  }
+ }
+}
+
+
+Output:
+Enter the number:5
+number a[0]=10
+number a[1]=15
+number a[2]=9
+number a[3]=5
+number a[4]=15
+Array in ascending order is:
+ 5 9 10 15 15
+
+
+
+ //9.3
+ #include<stdio.h>
+    long factorial(int n)
+    {
+      if ((n == 0)||(n==1))
+        return 1;
+      else
+        return(n * factorial(n-1));
+    }
+    int main()
+    {
+      int number;
+      long fact;
+      printf("Enter a number: ");
+      scanf("%d", &number);
+      fact = factorial(number);
+      printf("Factorial of %d is %ld\n", number, fact);
+      return 0;
+    }
+
+
+Output:
+Enter a number: 5
+Factorial of 5 is 120
+
+
+
+
+
