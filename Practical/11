@@ -1,0 +1,157 @@
+//11.1
+#include <stdio.h>
+#include<ctype.h>
+#include<stdlib.h>
+int main()
+{
+ char ch;
+ FILE *fp;
+ fp=fopen("std1.txt","w");
+ printf("enter the text.press cntrl Z:\n");
+ while((ch = getchar())!=EOF)
+ {
+ putc(ch,fp);
+ }
+ fclose(fp);
+ fp=fopen("std1.txt","r");
+ printf("text on the file:\n");
+ while ((ch=getc(fp))!=EOF)
+ {
+ if(ch == ',')
+ printf("\t");
+ else
+ printf("%c",ch);
+ }
+ fclose(fp);
+ return 0;
+}
+
+Output:
+enter the text.press cntrl Z:
+name,item,price
+kadir,50,25.50
+wahid,20,30.50
+^Z
+text on the file:
+name    item    price
+kadir   50      25.50
+wahid   20      30.50
+
+
+
+//11.2
+// Writing data randomly to a random-access file
+   #include <stdio.h>
+#include <stdlib.h>
+
+struct clientData {
+    unsigned int acctNum;
+    char lastName[15];
+    char firstName[10];
+    double balance;
+};
+
+int main(void) {
+    FILE *cfPtr;
+    struct clientData client = {0, "", "", 0.0};
+
+    // Try to open file for reading and writing in binary mode
+    if ((cfPtr = fopen("credit.txt", "rb+")) == NULL) {
+        // If the file doesn't exist, create it
+        if ((cfPtr = fopen("credit.txt", "wb+")) == NULL) {
+            puts("File could not be opened.");
+            return 1;
+        }
+    }
+
+    printf("Enter account number (1 to 100, 0 to end input):\n? ");
+    scanf("%u", &client.acctNum);
+
+    while (client.acctNum != 0) {
+        printf("Enter Firstname, Lastname, Balance:\n? ");
+        fscanf(stdin, "%14s %9s %lf", client.firstName, client.lastName, &client.balance);
+
+        // Move the file pointer to the correct record
+        fseek(cfPtr, (client.acctNum - 1) * sizeof(struct clientData), SEEK_SET);
+
+        // Write the record to the file
+        fwrite(&client, sizeof(struct clientData), 1, cfPtr);
+
+        printf("Enter account number (1 to 100, 0 to end input):\n? ");
+        scanf("%u", &client.acctNum);
+    }
+
+    fclose(cfPtr);
+
+    return 0;
+}
+
+
+Output:
+Output:
+Enter account number (1 to 100, 0 to end input):
+? 1599
+Enter Firstname, Lastname, Balance:
+? Abdul
+Kadir
+20000
+Enter account number (1 to 100, 0 to end input):
+? 2487
+Enter Firstname, Lastname, Balance:
+? Shuvo
+Banarjee
+17000
+Enter account number (1 to 100, 0 to end input):
+? 0
+
+Process returned 0 (0x0)   execution time : 43.009 s
+Press any key to continue.
+
+
+
+
+//11.3
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    FILE *fp1, *fp2;
+    char ch;
+
+    // Open source file for reading
+    fp1 = fopen("source.txt", "r");
+    if (fp1 == NULL) {
+        puts("Source file does not exist.");
+        exit(1);
+    }
+
+    // Open target file for writing
+    fp2 = fopen("target.txt", "w");
+    if (fp2 == NULL) {
+        puts("Target file could not be opened.");
+        fclose(fp1);
+        exit(1);
+    }
+
+    // Read from source and write to target in uppercase
+    while ((ch = fgetc(fp1)) != EOF) {
+        ch = toupper(ch);
+        fputc(ch, fp2);
+    }
+
+    // Close both files
+    fclose(fp1);
+    fclose(fp2);
+
+    printf("\nFile successfully copied.\n");
+    return 0;
+}
+
+
+Output:
+File successfully copied.
+
+Process returned 0 (0x0)   execution time : 0.787 s
+Press any key to continue.
+
