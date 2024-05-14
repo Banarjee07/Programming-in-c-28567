@@ -63,7 +63,7 @@ Element at index 4 is 200
 
 
 
-//7.3.1
+//7.3.i
 #include <stdio.h>
 int main() {
   system("color f0");
@@ -125,7 +125,7 @@ Sum of two matrices:
 16   10   5 
 
 
-//7.3.2
+//7.3.ii
 #include<stdio.h>
 int main()
 {
