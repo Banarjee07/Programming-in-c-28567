@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+int i,Roll,Total,Average;
+int Marks[10]={67,75,78,68,85,79,70,72,81,82};
+printf("\nEnter Roll Number:");
+scanf("%d",&Roll);
+Total=0;
+for(i=0;i<10;i++)
+	Total=Total+Marks[i];
+Average=Total/10;
+printf("\nRoll No.=%d",Roll);
+printf("\nTotal Marks =%d",Total);
+printf("\nAverage=%d",Average);
+if(Average>=60)
+	printf("\nResult is First Division\n");
+else if(Average>=45)
+	printf("\nResult is Second Division\n");
+else if(Average>=33)
+	printf("\nResult is Third Division\n");
+else
+	printf("\nResult is Fail\n");
+return 0;
+}
+
+
+
+Output:
+Enter Roll Number:89
+Roll No.=89
+Total Marks =757
+Average=75
+Result is First Division
+
