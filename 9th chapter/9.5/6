@@ -1,0 +1,85 @@
+#include <stdio.h>
+
+#define NUM_STUDENTS 3
+#define NUM_SUBJECTS 3
+
+struct Student {
+    int id;
+    int marks[NUM_SUBJECTS];
+    int total;
+};
+
+void calculateTotalMarks(struct Student students[], int numStudents) {
+    for (int i = 0; i < numStudents; i++) {
+        students[i].total = 0;
+        for (int j = 0; j < NUM_SUBJECTS; j++) {
+            students[i].total += students[i].marks[j];
+        }
+    }
+}
+
+void sortStudentsByTotalMarks(struct Student students[], int numStudents) {
+    struct Student temp;
+    for (int i = 0; i < numStudents - 1; i++) {
+        for (int j = i + 1; j < numStudents; j++) {
+            if (students[i].total < students[j].total) {
+                temp = students[i];
+                students[i] = students[j];
+                students[j] = temp;
+            }
+        }
+    }
+}
+
+void printStudents(struct Student students[], int numStudents) {
+    printf("\nID\tTotal Marks\n");
+    for (int i = 0; i < numStudents; i++) {
+        printf("%d\t%d\n", students[i].id, students[i].total);
+    }
+}
+
+int main() {
+    struct Student students[NUM_STUDENTS];
+
+    // Input student data
+    for (int i = 0; i < NUM_STUDENTS; i++) {
+        printf("Enter ID for student %d: ", i + 1);
+        scanf("%d", &students[i].id);
+
+        printf("Enter marks for 3 subjects for student %d: ", i + 1);
+        for (int j = 0; j < NUM_SUBJECTS; j++) {
+            scanf("%d", &students[i].marks[j]);
+        }
+    }
+
+    // Calculate total marks for each student
+    calculateTotalMarks(students, NUM_STUDENTS);
+
+    // Sort students by total marks in descending order
+    sortStudentsByTotalMarks(students, NUM_STUDENTS);
+
+    // Print students sorted by total marks
+    printStudents(students, NUM_STUDENTS);
+
+    return 0;
+}
+
+
+Output:
+Enter ID for student 1: 89
+Enter marks for 3 subjects for student 1: 70
+88
+93
+Enter ID for student 2: 47
+Enter marks for 3 subjects for student 2: 77
+80
+86
+Enter ID for student 3: 93
+Enter marks for 3 subjects for student 3: 77
+99
+50
+
+ID	Total Marks
+89	251
+47	243
+93	226
